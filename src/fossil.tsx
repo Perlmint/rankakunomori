@@ -76,7 +76,7 @@ export default function FossilView() {
                 <TextField label="내 데이터" readOnly value={myData} />
                 <Button title="share" iconProps={{ iconName: 'share' }} onClick={
                     async () => {
-                        await navigator.clipboard.writeText(`${location.protocol}//${location.host}?compare=${myData}`);
+                        await navigator.clipboard.writeText(`${location.protocol}//${location.host}${location.pathname}?compare=${myData}`);
                         alert('Copied!');
                     }
                 }/>
