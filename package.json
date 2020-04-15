@@ -1,0 +1,39 @@
+{
+  "name": "rankaku-no-mori",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack-dev-server -r ts-node/register --config webpack.config.ts",
+    "build": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack -r ts-node/register --config webpack.config.ts"
+  },
+  "author": "Gyusun Yeom",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/html-webpack-plugin": "^3.2.2",
+    "@types/lodash-es": "^4.17.3",
+    "@types/node": "^13.9.5",
+    "@types/react": "^16.9.27",
+    "@types/react-dom": "^16.9.5",
+    "@types/webpack": "^4.41.8",
+    "@uifabric/fluent-theme": "^7.1.51",
+    "cross-env": "^7.0.2",
+    "csv-loader": "^3.0.2",
+    "html-webpack-plugin": "^4.0.3",
+    "papaparse": "^5.2.0",
+    "ts-loader": "^6.2.2",
+    "ts-node": "^8.8.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@fluentui/react": "^7.105.5",
+    "immutability-helper": "^3.0.1",
+    "lodash-es": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
