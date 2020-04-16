@@ -15,8 +15,8 @@ const AvailableLanguages = ["en", "ko", "ja"];
 const cache = createIntlCache();
 
 function Internationlize(props: { children?: ReactNode }) {
-    const [language, setLanguage] = useState(localStorage.getItem('language') ?? navigator.language);
-
+    let [language, setLanguage] = useState(localStorage.getItem('language') ?? navigator.language);
+    language = language.split('-')[0];
     localStorage.setItem('language', language);
 
     const LoaderComponent = lazy(async () => {
