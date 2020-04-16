@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import fossil_data from "./data/fossil.csv";
 import { IconButton, Button } from '@fluentui/react/lib/Button';
-import { DetailsList, IDetailsRowStyles } from '@fluentui/react/lib/DetailsList';
+import { DetailsList, IDetailsRowStyles, CheckboxVisibility } from '@fluentui/react/lib/DetailsList';
 import { Fabric } from '@fluentui/react/lib/Fabric';
 import { Stack } from '@fluentui/react/lib/Stack';
 import { TextField } from '@fluentui/react/lib/TextField';
@@ -9,20 +9,20 @@ import { Icon } from '@fluentui/react/lib/Icon';
 import { SharedColors } from '@uifabric/fluent-theme/lib/fluent/FluentColors';
 import fill from 'lodash-es/fill';
 import update from 'immutability-helper';
-import { isFunction } from 'lodash-es';
+import isFunction from 'lodash-es/isFunction';
+import { useIntl, FormattedMessage } from 'react-intl';
 
 interface State {
     my: number[],
     compare?: number[],
 }
 
-type Data = typeof fossil_data[0];
 const valueStyle: React.CSSProperties = {
     fontWeight: "bold",
 }
 
 export default function FossilView() {
-    const language = 'kor';
+    const intl = useIntl();
     const [state, setState] = useState<State>(() => {
         const savedState = localStorage.getItem('fossil_data');
         let state: State | undefined = undefined;
@@ -30,7 +30,7 @@ export default function FossilView() {
             try {
                 state = JSON.parse(savedState);
             } catch (e) {
-                console.error("Failed to parsed saved data", e);
+                console.error(intl.formatMessage({ id: "Failed to parsed input data" }), e);
             }
         }
         if (state === undefined) {
@@ -48,7 +48,7 @@ export default function FossilView() {
         return state;
     });
     useEffect(() => {
-        localStorage.setItem('fossil_data', JSON.stringify(state));
+        localStorage.setItem('fossil_data', JSON.stringify({ my: state.my }));
     });
     const compareData = state.compare?.join(",") ?? "";
     const myData = state.my.join(",");
@@ -63,42 +63,70 @@ export default function FossilView() {
         }
     }
 
+    function createURLWithCompareData(data: string) {
+        return `${location.protocol}//${location.host}${location.pathname}?compare=${data}`;
+    }
+
     return <Fabric>
-        <Stack>
-            <TextField label="비교 데이터" defaultValue={compareData} onBlur={(ev) => {
-                setState(update(state, {
-                    compare: {
-                        $set: ev.target.value.split(",").map(v => parseInt(v, 10)),
-                    }
-                }));
-            }} />
+        <Stack tokens={{ padding: 'm' }}>
+            <FormattedMessage id="Fossils" tagName="h2" />
             <Stack horizontal>
-                <TextField label="내 데이터" readOnly value={myData} />
-                <Button title="share" iconProps={{ iconName: 'share' }} onClick={
-                    async () => {
-                        await navigator.clipboard.writeText(`${location.protocol}//${location.host}${location.pathname}?compare=${myData}`);
-                        alert('Copied!');
-                    }
-                }/>
+                <Stack.Item grow={1}>
+                    <TextField label={intl.formatMessage({ id: "Data to compare"})} defaultValue={compareData} onBlur={(ev) => {
+                        try {
+                            const data = ev.target.value.split(",").map(v => parseInt(v, 10));
+                            setState(update(state, {
+                                compare: {
+                                    $set: data,
+                                }
+                            }));
+                            history.replaceState(undefined, document.title, createURLWithCompareData(ev.target.value));
+                        } catch (e) {
+                            alert(intl.formatMessage({ id: "Failed to parsed input data" }));
+                        }
+                    }} />
+                </Stack.Item>
+                <Stack.Item grow={1}>
+                    <TextField label={intl.formatMessage({ id: 'My data' })} defaultValue={myData}  onBlur={(ev) => {
+                        try {
+                            const data = ev.target.value.split(",").map(v => parseInt(v, 10));
+                            setState(update(state, {
+                                my: {
+                                    $set: data,
+                                }
+                            }));
+                        } catch (e) {
+                            alert(intl.formatMessage({ id: "Failed to parsed input data" }));
+                        }
+                    }}/>
+                </Stack.Item>
+                <Stack.Item>
+                    <Button title="share" iconProps={{ iconName: 'share' }} onClick={
+                        async () => {
+                            await navigator.clipboard.writeText(createURLWithCompareData(myData));
+                            alert(intl.formatMessage({ id: 'Copied! Share copied URL' }));
+                        }
+                    } style={{ height: '100%'}}/>
+                </Stack.Item>
             </Stack>
             <DetailsList items={fossil_data} columns={[
                 {
                     key: 'name',
-                    name: '이름',
-                    fieldName: language,
+                    name: intl.formatMessage({ id: "Name" }),
+                    fieldName: intl.locale,
                     minWidth: 100,
                     maxWidth: 200,
                 },
                 {
                     key: 'price',
                     fieldName: 'price',
-                    name: '가격',
+                    name: intl.formatMessage({ id: "Price" }),
                     minWidth: 50,
                     maxWidth: 50,
                 },
                 {
                     key: 'my',
-                    name: '소유',
+                    name: intl.formatMessage({ id: "My" }),
                     minWidth: 50,
                     maxWidth: 100,
                     onRender(_, index) {
@@ -110,7 +138,11 @@ export default function FossilView() {
                                     },
                                 }),
                             )} />
-                            {renderCount(state.my[index!])}
+                            <Stack.Item grow={1} styles={{ root: { display: 'flex' }}}>
+                                <div style={{ textAlign: 'center', margin: 'auto' }}>
+                                    {renderCount(state.my[index!])}
+                                </div>
+                            </Stack.Item>
                             <IconButton iconProps={{ iconName: 'Add' }} title="add" onClick={() => setState(
                                 update(state, {
                                     my: {
@@ -123,7 +155,7 @@ export default function FossilView() {
                 },
                 {
                     key: 'comapre',
-                    name: '비교',
+                    name: intl.formatMessage({ id: "Compare" }),
                     minWidth: 50,
                     maxWidth: 50,
                     onRender(_, index) {
@@ -158,6 +190,7 @@ export default function FossilView() {
                 }
                 return render(props);
             }}
+            checkboxVisibility={CheckboxVisibility.hidden}
             compact={true} />
         </Stack>
     </Fabric>
