@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack-dev-server -r ts-node/register --config webpack.config.ts",
-    "build": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack -r ts-node/register --config webpack.config.ts"
+    "build": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json NODE_ENV=production webpack -r ts-node/register --config webpack.config.ts --release",
+    "deploy": "node deploy.js"
   },
   "author": "Gyusun Yeom",
   "license": "MIT",
@@ -37,5 +38,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intl": "^4.4.0"
+  },
+  "optionalDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
