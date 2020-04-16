@@ -1,5 +1,5 @@
-type NAME = "eng" | "kor";
+export type Language = "en" | "ko" | "ja";
 declare const value: ({
-    [name in NAME]: string;
-    } & { price: number })[]
-export = value;
+    [language in Language]: string;
+} & { price: number })[];
+export default value;

@@ -1,75 +1,75 @@
-﻿eng,kor,price
-acanthostega,아칸토스테가,2000
-amber,호박,1200
-ammonite,암모나이트,1100
-ankylo skull,안킬로사우루스의 머리,5000
-ankylo torso,안킬로사우루스의 몸통,3000
-ankylo tail,안킬로사우루스의 꼬리,2500
-anomalocaris,아노말로카리스,2000
-archaeopteryx,시조새,1300
-archelon skull,아르켈론의 머리,4000
-archelon tail,아르켈론의 꼬리,3500
-australopith,오스트랄로피테쿠스,1100
-branchio skull,브라키오사우루스의 머리,6000
-brachio chest,브라키오사우루스의 가슴,5500
-brachio pelvis,브라키오사우루스의 허리,5000
-brachio tail,브라키오사우루스의 꼬리,5500
-coprolite,대변화석,1100
-deinony torso,데이노니쿠스의 몸통,3000
-deinony tail,데이노니쿠스의 꼬리,2500
-dimetrodon skull,디메트로돈의 머리,5500
-dimetrodon torso,디메트로돈의 몸통,4500
-dimetrodon tail,디메트로돈의 꼬리,5000
-dinosaur track,발자국 화석,1000
-diplo skull,디플로도쿠스의 머리,5000
-diplo neck,디플로도쿠스의 목,4500
-diplo chest,디플로도쿠스의 가슴,4000
-diplo pelvis,디플로도쿠스의 허리,4000
-diplo tail,드플로도쿠스의 꼬리,5000
-diplo tail tip,디플로도쿠스의 꼬리 끝,4000
-dunkleosteus,둔클레오스테우스,3500
-eusthenopteron,에우스테놉테론,2000
-iguanodon skull,이구아노돈의 머리,4000
-iguanodon torso,이구아노돈의 몸통,3500
-iguanodon tail,이구아노돈의 꼬리,3000
-juramaia,쥐라마이아,1000
-mammoth skull,매머드의 머리,3000
-mammoth torso,매머드의 몸통,2500
-megacero skull,메가케롭스의 머리,4000
-megacero torso,메가케롭스의 몸통,3500
-megacero tail,메가케롭스의 꼬리,3000
-megalo left side,메갈로케로스의 왼쪽,4000
-megalo right side,메갈로케로스의 오른쪽,5500
-myllokunmingia,밀로쿤밍기아,1500
-ophthalmo skull,오프탈모사우루스의 머리,2500
-ophthalmo torso,오프탈모사우루스의 몸통,2000
-pachy skull,파키케팔로사우루스의 머리,4000
-pachy tail,파키케팔로사우루스의 꼬리,3500
-parasaur skull,파라사우롤로푸스의 머리,
-parasaur torso,파라사우롤로푸스의 몸통,
-parasaur tail,파라사우롤로푸스의 꼬리,
-plesio skull,플레시오사우루스의 머리,
-plesio neck,플레시오사우루스의 목,
-plesio torso,플레시오사우루스의 몸통,
-ptera body,프테라노돈의 머리,
-left ptera wing,프테라노돈의 왼날개,
-right ptera wing,프테라노돈의 오른날개,
-quetzal torso,코찰케아틀루스의 머리,
-left quetzal wing,코찰케아틀루스의 왼날개,
-right quetzal wing,코찰케아틀루스의 오른날개,
-sabertooth skull,스밀로돈의 머리,
-sabertooth torso,스밀로돈의 몸통,
-shark-tooth pattern,상어 이빨 화석,1000
-spino skull,스피노사우루스의 머리,
-spino torso,스피노사우루스의 몸통,
-spino tail,스피노사우루스의 꼬리,
-stego skull,스테고사우루스 머리,
-stego torso,스테고사우루스 몸통,
-stego tail,스테고사우루스 꼬리,
-t. rex skull,티렉스 머리,
-t. rex torso,티렉스 몸통,
-t. rex tail,티렉스 꼬리,
-tricera skull,트리케라톱스의 머리,
-tricera torso,트리케라톱스의 몸통,
-tricera tail,트리케라톱스의 꼬리,
-trilobite,삼엽충,1300
+﻿en,ko,ja,price
+Acanthostega,아칸토스테가,アカントステガ,2000
+Amber,호박,コハク,1200
+Ammonite,암모나이트,アンモナイト,1100
+Ankylo skull,안킬로사우루스의 머리,アンキロサウルスのあたま,3500
+Ankylo torso,안킬로사우루스의 몸통,アンキロサウルスのからだ,3000
+Ankylo tail,안킬로사우루스의 꼬리,アンキロサウルスのしっぽ,2000
+Anomalocaris,아노말로카리스,アノマロカリス,2000
+Archaeopteryx,시조새,しそちょう,1300
+Archelon skull,아르켈론의 머리,アーケロンのあたま,4000
+Archelon tail,아르켈론의 몸통,アーケロンのからだ,3500
+Australopith,오스트랄로피테쿠스,アウストラロピテクス,1100
+Branchio skull,브라키오사우루스의 머리,ブラキオサウルスのあたま,6000
+Brachio chest,브라키오사우루스의 가슴,ブラキオサウルスのむね,5500
+Brachio pelvis,브라키오사우루스의 허리,ブラキオサウルスのこし,5000
+Brachio tail,브라키오사우루스의 꼬리,ブラキオサウルスのしっぽ,5500
+Coprolite,대변화석,ウンコのかせき,1100
+Deinony torso,데이노니쿠스의 몸통,ディノニクスのあたま,2500
+Deinony tail,데이노니쿠스의 꼬리,ディノニクスのしっぽ,2000
+Dimetrodon skull,디메트로돈의 머리,ディメトロドンのあたま,5500
+Dimetrodon torso,디메트로돈의 몸통,ディメトロドンのからだ,4500
+Dimetrodon tail,디메트로돈의 꼬리,ディメトロドンのしっぽ,5000
+Dinosaur track,발자국 화석,あしあとのかせき,1000
+Diplo skull,디플로도쿠스의 머리,ディプロドクスのあたま,5000
+Diplo neck,디플로도쿠스의 목,ディプロドクスのくび,4500
+Diplo chest,디플로도쿠스의 가슴,ディプロドクスのむね,4000
+Diplo pelvis,디플로도쿠스의 허리,ディプロドクスのこし,4500
+Diplo tail,드플로도쿠스의 꼬리,ディプロドクスのしっぽ,5000
+Diplo tail tip,디플로도쿠스의 꼬리 끝,ディプロドクスのしっぽのさき,4000
+Dunkleosteus,둔클레오스테우스,ダンクルオステウス,3500
+Eusthenopteron,에우스테놉테론,ユーステノプテロン,2000
+Iguanodon skull,이구아노돈의 머리,イグアノドンのあたま,4000
+Iguanodon torso,이구아노돈의 몸통,イグアノドンのからだ,3500
+Iguanodon tail,이구아노돈의 꼬리,イグアノドンのしっぽ,3000
+Juramaia,쥐라마이아,ジュラマイア,1500
+Mammoth skull,매머드의 머리,マンモスのあたま,3000
+Mammoth torso,매머드의 몸통,マンモスのからだ,2500
+Megacero skull,메가케롭스의 머리,メガセロプスのあたま,4000
+Megacero torso,메가케롭스의 몸통,メガセロプスのからだ,3500
+Megacero tail,메가케롭스의 꼬리,メガセロプスのしっぽ,3000
+Megalo left side,메갈로케로스의 왼쪽,メガロケロスのひだりはんしん,4000
+Megalo right side,메갈로케로스의 오른쪽,メガロケロスのみぎはんしん,5500
+Myllokunmingia,밀로쿤밍기아,ミロクンミンギア,1500
+Ophthalmo skull,오프탈모사우루스의 머리,オフタモサウルスのあたま,2500
+Ophthalmo torso,오프탈모사우루스의 몸통,オフタモサウルスのからだ,2000
+Pachy skull,파키케팔로사우루스의 머리,パキケファロのあたま,4000
+Pachy tail,파키케팔로사우루스의 꼬리,パキケファロのからだ,2800
+Parasaur skull,파라사우롤로푸스의 머리,パラサウロロフスのあたま,3500
+Parasaur torso,파라사우롤로푸스의 몸통,パラサウロロフスのからだ,3000
+Parasaur tail,파라사우롤로푸스의 꼬리,パラサウロロフスのしっぽ,2500
+Plesio skull,후타바사우루스의 머리,フタバサウルスのあたま,4000
+Plesio neck,후타바사우루스의 목,フタバサウルスのからだ,4500
+Plesio torso,후타바사우루스의 꼬리,フタバサウルスのしっぽ,4500
+Ptera body,프테라노돈의 머리,プテラノドンのあたま,4000
+Left ptera wing,프테라노돈의 왼날개,プテラノドンのさよく,4500
+Right ptera wing,프테라노돈의 오른날개,プテラノドンのうよく,4500
+Quetzal torso,코찰케아틀루스의 머리,ケツァルコアトルスのあたま,4500
+Left quetzal wing,코찰케아틀루스의 왼날개,ケツァルコアトルスのさよく,5000
+Right quetzal wing,코찰케아틀루스의 오른날개,ケツァルコアトルスのうよく,5000
+Sabertooth skull,스밀로돈의 머리,スミロドンのあたま,2500
+Sabertooth torso,스밀로돈의 몸통,スミロドンのからだ,2000
+Shark-tooth pattern,상어 이빨 화석,サメのはのかせき,1000
+Spino skull,스피노사우루스의 머리,スピノサウルスのあたま,4000
+Spino torso,스피노사우루스의 몸통,スピノサウルスのからだ,3000
+Spino tail,스피노사우루스의 꼬리,スピノサウルスのしっぽ,2500
+Stego skull,스테고사우루스 머리,ステゴザウルスのあたま,5000
+Stego torso,스테고사우루스 몸통,ステゴザウルスのからだ,4500
+Stego tail,스테고사우루스 꼬리,ステゴザウルスのしっぽ,4000
+T. rex skull,티렉스 머리,Tレックスのあたま,6000
+T. rex torso,티렉스 몸통,Tレックスのからだ,5500
+T. rex tail,티렉스 꼬리,Tレックスのしっぽ,5000
+Tricera skull,트리케라톱스의 머리,トリケラトプスのあたま,5500
+Tricera torso,트리케라톱스의 몸통,トリケラトプスのからだ,5000
+Tricera tail,트리케라톱스의 꼬리,トリケラトプスのしっぽ,4500
+Trilobite,삼엽충,さんようちゅう,1300
