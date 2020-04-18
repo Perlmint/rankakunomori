@@ -4,11 +4,14 @@
     "ko": "韓国語 (한국어)",
     "ja": "日本語",
 
+    "Usage": "使用方法",
+
     "Fossils": "化石",
     "Data to compare": "他のデータ",
     "My data": "私のデータ",
     "Copied! Share copied URL": "URLをコピーしました。コピーできたURLをシェアしてください",
     "Failed to parsed input data": "入力したデータの解析を失敗しました。",
+    "fossil.usage": "{x}: 発見したこと無し. {check}: 博物館にある. {number}数字: 残りあり",
     "Name": "名前",
     "Price": "価格",
     "My": "持っているの",

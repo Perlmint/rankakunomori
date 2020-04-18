@@ -6,7 +6,9 @@ import { Fabric } from '@fluentui/react/lib/Fabric';
 import { Stack } from '@fluentui/react/lib/Stack';
 import { TextField } from '@fluentui/react/lib/TextField';
 import { Icon } from '@fluentui/react/lib/Icon';
+import { MessageBar, MessageBarType } from '@fluentui/react/lib/MessageBar';
 import { SharedColors } from '@uifabric/fluent-theme/lib/fluent/FluentColors';
+import { useId } from '@uifabric/react-hooks';
 import fill from 'lodash-es/fill';
 import update from 'immutability-helper';
 import isFunction from 'lodash-es/isFunction';
@@ -22,6 +24,7 @@ const valueStyle: React.CSSProperties = {
 }
 
 export default function FossilView() {
+    const usageLayerHostId = useId('usage_layer');
     const intl = useIntl();
     const [state, setState] = useState<State>(() => {
         const savedState = localStorage.getItem('fossil_data');
@@ -109,6 +112,13 @@ export default function FossilView() {
                     } style={{ height: '100%'}}/>
                 </Stack.Item>
             </Stack>
+            <MessageBar messageBarType={MessageBarType.info} title={intl.formatMessage({ id: 'Usage' })} styles={{ root: { marginTop: 12} }}>
+                {intl.formatMessage({ id: 'fossil.usage' }, {
+                    x: <Icon iconName="Cancel" style={{ color: SharedColors.red20, ...valueStyle }} />,
+                    check: <Icon iconName="CheckMark" style={{ color: SharedColors.greenCyan10, ...valueStyle }} />,
+                    number: <Icon iconName="NumberSymbol" />,
+                })}
+            </MessageBar>
             <DetailsList items={fossil_data} columns={[
                 {
                     key: 'name',
@@ -127,8 +137,8 @@ export default function FossilView() {
                 {
                     key: 'my',
                     name: intl.formatMessage({ id: "My" }),
-                    minWidth: 50,
-                    maxWidth: 100,
+                    minWidth: 80,
+                    maxWidth: 120,
                     onRender(_, index) {
                         return <Stack horizontal style={{ width: '100%', verticalAlign: 'middle' }}>
                             <IconButton iconProps={{ iconName: 'Remove' }} title="subtract" onClick={() => setState(

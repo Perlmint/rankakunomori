@@ -4,11 +4,14 @@
     "ko": "한국어",
     "ja": "일본어 (日本語)",
 
+    "Usage": "사용 방법",
+
     "Fossils": "화석",
     "Data to compare": "비교 데이터",
     "My data": "내 데이터",
     "Copied! Share copied URL": "복사되었습니다. 복사된 URL을 공유하세요.",
     "Failed to parsed input data": "입력된 데이터를 해석하는데 실패했습니다.",
+    "fossil.usage": "{x}: 발견한 적 없음. {check}: 박물관에 전시중. {number}숫자: 남은 수량",
     "Name": "이름",
     "Price": "가격",
     "My": "내 소유",

@@ -1,4 +1,4 @@
-import React, { useState, ReactNode, lazy, Suspense } from 'react';
+import React, { useState, ReactNode, lazy, Suspense, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Fossil from './fossil';
 import { initializeIcons } from '@fluentui/react/lib/Icons';
@@ -17,7 +17,9 @@ const cache = createIntlCache();
 function Internationlize(props: { children?: ReactNode }) {
     let [language, setLanguage] = useState(localStorage.getItem('language') ?? navigator.language);
     language = language.split('-')[0];
-    localStorage.setItem('language', language);
+    useEffect(() => {
+        localStorage.setItem('language', language);
+    }, [language]);
 
     const LoaderComponent = lazy(async () => {
         const message: {[key: string]: string} = await import(`./data/${language}.json`);
