@@ -3,5 +3,6 @@
     "ko": "Korean (한국어)",
     "ja": "Japanese (日本語)",
 
-    "fossil.usage": "{x}: have never been found.\t{check}: exihibited in museum.\t{number}any number: remain things"
+    "fossil.usage.default": "{x}: have never been found.\t{check}: exihibited in museum.\t{number}any number: remain things",
+    "fossil.usage.comparison": "{blue} : you can give, {red} : you can receive"
 }

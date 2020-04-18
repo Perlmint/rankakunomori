@@ -113,10 +113,16 @@ export default function FossilView() {
                 </Stack.Item>
             </Stack>
             <MessageBar messageBarType={MessageBarType.info} title={intl.formatMessage({ id: 'Usage' })} styles={{ root: { marginTop: 12} }}>
-                {intl.formatMessage({ id: 'fossil.usage' }, {
+                {intl.formatMessage({ id: 'fossil.usage.default' }, {
                     x: <Icon iconName="Cancel" style={{ color: SharedColors.red20, ...valueStyle }} />,
                     check: <Icon iconName="CheckMark" style={{ color: SharedColors.greenCyan10, ...valueStyle }} />,
                     number: <Icon iconName="NumberSymbol" />,
+                })}
+            </MessageBar>
+            <MessageBar messageBarType={MessageBarType.info} title={intl.formatMessage({ id: 'Usage' })} styles={{ root: { marginTop: 12} }}>
+                {intl.formatMessage({ id: 'fossil.usage.comparison' }, {
+                    blue: <Icon iconName="ToggleFilled" style={{ color: SharedColors.cyanBlue10, ...valueStyle }} />,
+                    red: <Icon iconName="ToggleFilled" style={{ color: SharedColors.redOrange10, ...valueStyle }} />,
                 })}
             </MessageBar>
             <DetailsList items={fossil_data} columns={[
@@ -184,10 +190,17 @@ export default function FossilView() {
                 if (state.compare) {
                     const my = state.my[props.itemIndex];
                     const compare = state.compare[props.itemIndex];
-                    if (my === -1 && compare > 0 || my > 0 && compare === -1) {
+                    let rowColor: string | undefined = undefined;
+                    if (my > 0 && compare === -1) {
+                        rowColor = SharedColors.cyanBlue10;
+                    } else if (my === -1 && compare > 0) {
+                        rowColor = SharedColors.redOrange10;
+                    }
+
+                    if (rowColor !== undefined) {
                         const overrideStyle: Partial<IDetailsRowStyles> = {
                             root: {
-                                backgroundColor: SharedColors.cyanBlue10 + 'aa',
+                                backgroundColor: rowColor + 'aa',
                             },
                         };
                         if (isFunction(props.styles)) {
