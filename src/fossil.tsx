@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import fossil_data from "./data/fossil.csv";
 import { IconButton, Button } from '@fluentui/react/lib/Button';
-import { DetailsList, IDetailsRowStyles, CheckboxVisibility } from '@fluentui/react/lib/DetailsList';
+import { DetailsList, IDetailsRowStyles, CheckboxVisibility, SelectionMode } from '@fluentui/react/lib/DetailsList';
 import { Fabric } from '@fluentui/react/lib/Fabric';
 import { Stack } from '@fluentui/react/lib/Stack';
 import { TextField } from '@fluentui/react/lib/TextField';
@@ -214,6 +214,7 @@ export default function FossilView() {
                 return render(props);
             }}
             checkboxVisibility={CheckboxVisibility.hidden}
+            selectionMode={SelectionMode.none}
             compact={true} />
         </Stack>
     </Fabric>
